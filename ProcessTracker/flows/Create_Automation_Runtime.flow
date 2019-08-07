@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Email current user to let them know an error occurred in running this Flow.</description>
+        <name>Error_Handling_Email</name>
+        <label>Error Handling Email</label>
+        <locationX>423</locationX>
+        <locationY>51</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>ErrorHandlingEmail</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <stringValue>admin@yourorganization.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>Error in Create Automation Runtime Flow</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <description>This version sends an email to the system admin with the error instead of current user.
+
+Process Automation Tracking unmanaged package by Jessie Rymph. June 2019. 
+New version includes error handling email. 
+More information https://unhandledsunshine.com/2019/06/05/was-it-worth-my-time-to-automate-that/</description>
+    <formulas>
+        <name>CurrentUserEmail</name>
+        <dataType>String</dataType>
+        <expression>{!$User.Email}</expression>
+    </formulas>
+    <interviewLabel>Create Automation Runtime {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Automation Runtime</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create the Automation Runtime record. This is a child record that will be created each time an automation is run. These records will be rolled up onto the Process Automation parent record to measure the total number of times this process has run.</description>
+        <name>Create_Runtime</name>
+        <label>Create Runtime</label>
+        <locationX>208</locationX>
+        <locationY>50</locationY>
+        <faultConnector>
+            <targetReference>Error_Handling_Email</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <stringValue>Name</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Process_Automation__c</field>
+            <value>
+                <elementReference>ProcessAutomationID</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Automation_Runtime__c</object>
+    </recordCreates>
+    <startElementReference>Create_Runtime</startElementReference>
+    <status>Obsolete</status>
+    <textTemplates>
+        <name>ErrorHandlingEmail</name>
+        <text>FORWARD THIS EMAIL TO YOUR SALESFORCE ADMINISTRATOR. 
+An error occurred when running the Flow &quot;Create Automation Runtime.&quot; 
+This Flow is part of the unmanaged package called &quot;Process Automation.&quot; 
+Find more info on the Process Automation record with ID: {!ProcessAutomationID}.
+Flow Fault Message: {!$Flow.FaultMessage}</text>
+    </textTemplates>
+    <variables>
+        <description>Process Automation record variable.</description>
+        <name>PArecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Process_Automation__c</objectType>
+    </variables>
+    <variables>
+        <name>ProcessAutomationID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

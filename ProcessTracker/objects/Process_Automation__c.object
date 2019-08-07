@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Time_Saved__c</fields>
+        <fields>Times_Run_Ever__c</fields>
+        <label>Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Process Automation Tracking unmanaged package by Jessie Rymph. June 2019. More information https://unhandledsunshine.com/2019/06/05/was-it-worth-my-time-to-automate-that/</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Link_to_Process__c</fullName>
+        <description>paste in a link here to the automation that you are tracking.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to Workflow Rule, PB, Flow, etc.</inlineHelpText>
+        <label>Process Link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Node__c</fullName>
+        <description>Type in the Name of PB Node or Flow Decision so you can easily identify the part of the Process that you are tracking.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of PB Node or Flow Decision</inlineHelpText>
+        <label>Node</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Time_Saved__c</fullName>
+        <description>Formula to measure the amount of time this automation is saving to give you your return on investment for creating this automation.</description>
+        <externalId>false</externalId>
+        <formula>&quot;Seconds saved: &quot; 
+&amp; TEXT(   (Time_of_Previous_Process__c* Times_Run_Ever__c)-(Time_to_Build__c*3600)) &amp;
+/* Time of previous process multiplied by the times this automation has ever run, then subtract the time it took to build this automation (in seconds)*/
+&quot;. Minutes saved: &quot; 
+
+&amp; TEXT(
+(
+ROUND(
+(
+(Time_of_Previous_Process__c* Times_Run_Ever__c)
+/60),2))
+-(Time_to_Build__c*60))
+/* Time of previous process multiplied by the times this automation has ever run, then subtract the time it took to build this automation (in minutes)*/</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula to measure the amount of time this automation is saving.</inlineHelpText>
+        <label>Time Saved</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Time_of_Previous_Process__c</fullName>
+        <description>In seconds, how long did it take to do this before the automation was added?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In Seconds, how long did it take to do this before the automation was added?</inlineHelpText>
+        <label>Time of Previous Process (Seconds)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Time_to_Build__c</fullName>
+        <description>How long did it take to build, test, deploy this automation? Use this information to calculate how much time this automation has saved your organization.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How long did it take to build, test, deploy this automation?</inlineHelpText>
+        <label>Time to Build (Hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Times_Run_Ever__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Roll-up summary of Automation Runtime records.</inlineHelpText>
+        <label>Times Run Ever</label>
+        <summaryForeignKey>Automation_Runtime__c.Process_Automation__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>Which type of automation are you tracking?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Which type of automation are you tracking?</inlineHelpText>
+        <label>Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Workflow Rule</fullName>
+                    <default>false</default>
+                    <label>Workflow Rule</label>
+                </value>
+                <value>
+                    <fullName>Process Builder</fullName>
+                    <default>false</default>
+                    <label>Process Builder</label>
+                </value>
+                <value>
+                    <fullName>Flow</fullName>
+                    <default>false</default>
+                    <label>Flow</label>
+                </value>
+                <value>
+                    <fullName>Apex Class</fullName>
+                    <default>false</default>
+                    <label>Apex Class</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Process Automation</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Process Automation Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Process Automations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>
