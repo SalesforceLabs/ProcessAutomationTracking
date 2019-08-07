@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProcessTracker</fullName>
+    <description>Package by Jessie Rymph. June 2019. Additional information available here. https://unhandledsunshine.com/2019/06/05/was-it-worth-my-time-to-automate-that/</description>
+    <types>
+        <members>testAutomationRuntime</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Process_Automation__c.Compact_Layout</members>
+        <name>CompactLayout</name>
+    </types>
+    <types>
+        <members>Automation_Runtime__c.Process_Automation__c</members>
+        <members>Process_Automation__c.Link_to_Process__c</members>
+        <members>Process_Automation__c.Node__c</members>
+        <members>Process_Automation__c.Time_Saved__c</members>
+        <members>Process_Automation__c.Time_of_Previous_Process__c</members>
+        <members>Process_Automation__c.Time_to_Build__c</members>
+        <members>Process_Automation__c.Times_Run_Ever__c</members>
+        <members>Process_Automation__c.Type__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Automation_Runtime__c</members>
+        <members>Process_Automation__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Process_Automation__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Create_Automation_Runtime</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Automation_Runtime__c-Automation Runtime Layout</members>
+        <members>Process_Automation__c-Process Automation Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Process_Automation__c.All</members>
+        <name>ListView</name>
+    </types>
+    <version>46.0</version>
+</Package>
